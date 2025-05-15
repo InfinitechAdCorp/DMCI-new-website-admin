@@ -69,35 +69,36 @@ const DashboardPage: React.FC = () => {
     },
   ];
 
-  return (
-    <div className='space-y-4'>
-      <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4'>
-        {dashboardCard.map((item) => (
-          <Card key={item.key} className={`shadow-none rounded-xl border-gray-300 py-4 px-2 ${item.bgcolor}`}>
-            <CardBody>
-              <div className='flex justify-between items-center'>
-                <div>
-                  <h1 className={`${item.textcolor} text-4xl font-semibold`}>{item.data}</h1>
-                  <h1 className={`${item.textcolor} font-medium uppercase`}>{item.name}</h1>
-                </div>
-                <div className={`${item.textcolor}`}>
-                  {item.icons}
-                </div>
+return (
+  <div className="space-y-4 mt-12 md:mt-0">
+    <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      {dashboardCard.map((item) => (
+        <Card key={item.key} className={`shadow-none rounded-xl border-gray-300 py-4 px-2 ${item.bgcolor}`}>
+          <CardBody>
+            <div className="flex justify-between items-center">
+              <div>
+                <h1 className={`${item.textcolor} text-4xl font-semibold`}>{item.data}</h1>
+                <h1 className={`${item.textcolor} font-medium uppercase`}>{item.name}</h1>
               </div>
-            </CardBody>
-          </Card>
-        ))}
+              <div className={`${item.textcolor}`}>
+                {item.icons}
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+      ))}
+    </div>
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+      <div>
+        <DashboardInquiryTable />
       </div>
-      <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
-        <div>
-          <DashboardInquiryTable />
-        </div>
-        <div>
-          <DashboardAppointmentTable />
-        </div>
+      <div>
+        <DashboardAppointmentTable />
       </div>
     </div>
-  );
+  </div>
+);
+
 }
 
 export default DashboardPage;

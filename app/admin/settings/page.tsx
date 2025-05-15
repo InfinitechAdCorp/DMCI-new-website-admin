@@ -40,7 +40,8 @@ const SettingsPage = () => {
   }
 
   return (
-    <div className="container">
+<div className="w-full mx-auto bg-white border border-gray-200 shadow-sm rounded-xl p-4 lg:p-12 mt-12 md:mt-4">
+
       <h1 className="font-semibold text-3xl uppercase">Settings</h1>
       <div className="w-full mx-auto bg-white border border-gray-200 shadow-sm rounded-xl p-4 lg:p-12 mt-4">
         <div className="flex items-center gap-4 mb-6">

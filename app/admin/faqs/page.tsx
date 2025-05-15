@@ -5,7 +5,8 @@ import QuestionTable from './questiontb'
 
 const page = () => {
   return (
-    <div className="container">
+    <div className="mt-12 md:mt-0 container">
+
       <QuestionTable />
     </div>
 
