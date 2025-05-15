@@ -203,7 +203,7 @@ export default function UpdateCertificates({
                                     {certificate.image && (
                                         <div className="mb-4 flex justify-center items-center">
                                             <Image
-                                                src={`https://infinitech-testing5.online/certificates/${certificate.image}`}
+                                                src={`${process.env.NEXT_PUBLIC_API_URL}/certificates/${certificate.image}`}
                                                 alt="Current Certificate"
                                                 className="w-full h-auto rounded-md"
                                                 height={250}

@@ -28,7 +28,7 @@ export const ListingApprovalEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://infinitech-testing5.online/logo/dmci-logo-only.png"
+          src={`${process.env.NEXT_PUBLIC_API_URL}logo/dmci-logo-only.png`}
           height="170"
           alt="DMCI Homes Logo"
           style={logo}

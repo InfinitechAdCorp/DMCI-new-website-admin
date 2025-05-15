@@ -40,7 +40,7 @@ const UpdateNews: React.FC<UpdateNewsProps> = ({ initialData, onClose, mutate })
     useEffect(() => {
         if (typeof initialData.image === 'string') {
             // Construct the full image URL if the image is a filename
-            const imageUrl = `https://infinitech-testing5.online/contracts/${initialData.image}`;
+            const imageUrl = `${process.env.NEXT_PUBLIC_API_URL}/contracts/${initialData.image}`;
             setImagePreview(imageUrl);  // Set the full URL for image preview
         } else if (initialData.image instanceof File) {
             // Handle the case where image is a File object (local image)

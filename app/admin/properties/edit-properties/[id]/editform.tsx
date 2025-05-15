@@ -40,7 +40,7 @@ const EditForm = ({ property, properties }: Props) => {
       ? JSON.parse(property.images)
       : property.images || []
   ).map((image: string) => {
-    return `https://infinitech-testing5.online/properties/images/${image}`;
+    return `${process.env.NEXT_PUBLIC_API_URL}/properties/images/${image}`;
   });
 
   const [imagePreviews, setImagePreviews] = useState<string[]>(initialImages);
@@ -121,14 +121,14 @@ const EditForm = ({ property, properties }: Props) => {
         const imageArray = JSON.parse(property.image); // Assuming it's stored as a stringified array
         const imageUrls = imageArray.map(
           (filename: string) =>
-            `https://infinitech-testing5.online/properties/images/${filename}`
+            `${process.env.NEXT_PUBLIC_API_URL}/properties/images/${filename}`
         );
         setImagePreviews(imageUrls);
       } catch (error) {
         console.error("Error parsing property.image JSON:", error);
       }
     } else {
-      const imageUrl = `https://infinitech-testing5.online/properties/images/${property.property_plan_image}`;
+      const imageUrl = `${process.env.NEXT_PUBLIC_API_URL}/properties/images/${property.property_plan_image}`;
       setPlanPreviews(imageUrl);
     }
   }, [property.image, property.property_plan_image]);

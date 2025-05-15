@@ -273,9 +273,9 @@ const PropertyDetailsContent: React.FC<PropertyDetailsContentProps> = ({ id }) =
               {initialImages.length > 0 &&
                 initialImages.map((image: string, index: number) => (
                   <div key={`initial-${index}`} className="w-24 h-24 relative group">
-                    <PhotoView src={`https://infinitech-testing5.online/properties/images/${image}`}>
+                    <PhotoView src={`${process.env.NEXT_PUBLIC_API_URL}/properties/images/${image}`}>
                       <img
-                        src={`https://infinitech-testing5.online/properties/images/${image}`}
+                        src={`${process.env.NEXT_PUBLIC_API_URL}/properties/images/${image}`}
                         alt={`Existing Image ${index + 1}`}
                         className="w-full h-full object-cover rounded-lg"
                       />

@@ -151,7 +151,7 @@ const MasterPlan: React.FC<PropertyDetailsContentProps> = ({ id }) => {
                             <p><strong>Area:</strong> {unitData.area} sqm</p>
                             <p><strong>Theme:</strong> {unitData.theme}</p>
                             <img
-                                src={`https://infinitech-testing5.online/properties/plans/${unitData.image}`}
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/properties/plans/${unitData.image}`}
                                 alt={unitData.theme}
                                 className="max-w-screen-lg w-full h-[60vh] mt-2 object-cover mx-auto"
                             />

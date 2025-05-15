@@ -156,9 +156,9 @@ function Gallery() {
               key={image.id}
               className="relative overflow-hidden rounded-lg shadow-lg group"
             >
-              <PhotoView src={`https://infinitech-testing5.online/images/${image.image}`}>
+              <PhotoView src={`${process.env.NEXT_PUBLIC_API_URL}/images/${image.image}`}>
                 <Image
-                  src={`https://infinitech-testing5.online/images/${image.image}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/images/${image.image}`}
                   className="w-full object-cover transform transition-transform duration-300 group-hover:scale-110"
                   width={1000}
                   height={250}

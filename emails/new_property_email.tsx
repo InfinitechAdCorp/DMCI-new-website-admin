@@ -53,7 +53,7 @@ export const NewPropertyEmail = ({
               <Img
                 alt="DMCI Homes Logo"
                 height="80"
-                src="https://infinitech-testing5.online/logo/dmci-logo-only.png"
+                src={`${process.env.NEXT_PUBLIC_API_URL}logo/dmci-logo-only.png`}
                 style={{ display: "block", margin: "0 auto" }}
               />
             </td>

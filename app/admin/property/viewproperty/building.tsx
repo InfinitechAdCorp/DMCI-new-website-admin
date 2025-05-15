@@ -164,11 +164,11 @@ const PropertyBuilding: React.FC<PropertyDetailsContentProps> = ({ id }) => {
                 <PhotoProvider>
                     <PhotoView
                         data-title={row.name}
-                        src={`https://infinitech-testing5.online/properties/buildings/${row.image}`}
+                        src={`${process.env.NEXT_PUBLIC_API_URL}/properties/buildings/${row.image}`}
                     >
                         <img
                             className="w-16 h-16 object-cover rounded-lg"
-                            src={`https://infinitech-testing5.online/properties/buildings/${row.image}`}
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/properties/buildings/${row.image}`}
                             alt={row.name}
                         />
                     </PhotoView>

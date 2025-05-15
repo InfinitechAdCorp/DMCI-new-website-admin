@@ -135,12 +135,12 @@ const VideoTable: React.FC = () => {
                 <>
                     <div className="flex items-center space-x-2">
                         <Gallery withDownloadButton>
-                            <Item original={`https://infinitech-testing5.online/contracts/${category.image}`} height="800" width="500">
+                            <Item original={`${process.env.NEXT_PUBLIC_API_URL}/contracts/${category.image}`} height="800" width="500">
                                 {({ ref, open }) => (
                                     <Image
                                         ref={ref}
                                         onClick={open}
-                                        src={`https://infinitech-testing5.online/contracts/${category.image}`}
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}/contracts/${category.image}`}
                                         alt="Product Image"
                                         className="object-cover cursor-pointer"
                                         height={90}

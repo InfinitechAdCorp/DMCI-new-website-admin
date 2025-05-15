@@ -136,12 +136,12 @@ const ApplicationTable: React.FC<ApplicationTableProps> = ({ career_id }) => {
             label: 'Resume',
             accessor: (category: Category) => (
                 <Gallery withDownloadButton>
-                    <Item original={`https://infinitech-testing5.online/careers/applications/${category.resume}`} height="500" width="500">
+                    <Item original={`${process.env.NEXT_PUBLIC_API_URL}/careers/applications/${category.resume}`} height="500" width="500">
                         {({ ref, open }) => (
                             <img
                                 ref={ref}
                                 onClick={open}
-                                src={`hhttps://infinitech-testing5.online/careers/applications/${category.resume}`}
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/careers/applications/${category.resume}`}
                                 alt="Resume"
                                 className="w-16 h-16 object-cover rounded-lg cursor-pointer"
                             />

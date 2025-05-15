@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     domains: [
       "dmcicorporation.com",
-      "https://infinitech-testing5.online" 
+      "infinitech-testing5.online",
+      "localhost"           // added localhost here (no protocol, no port)
     ],
   },
   env: {
